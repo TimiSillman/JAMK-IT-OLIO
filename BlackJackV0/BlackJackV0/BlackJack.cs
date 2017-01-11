@@ -18,25 +18,25 @@ namespace JAMK.IT
                 //reading and converting 
                 theirNumber = Console.ReadLine();
                 //comparing that given umber is valid
+
                 if (theirNumber == "x" || theirNumber == "exit") { break; }
-                if (Int32.Parse(theirNumber) < 1 || Int32.Parse(theirNumber) > 21)
-                {
-                    Console.WriteLine("The given number is out of limits, try again.");
-                }
-                else
-                {
-                     myNumber = rnd.Next(1, 21);
-                    //comparing
-                    if (Int32.Parse(theirNumber) >= myNumber && Int32.Parse(theirNumber) <= 21)
+
+                    if (Int32.Parse(theirNumber) < 1 || Int32.Parse(theirNumber) > 21)
                     {
-                        System.Console.WriteLine("You win.");
+                        Console.WriteLine("The given number is out of limits, try again.");
                     }
-                    else
-                    {
-                        System.Console.WriteLine("You lose.");
-                    }
-                }
-               
+
+                        myNumber = rnd.Next(1, 21);
+                        //comparing
+                        if (Int32.Parse(theirNumber) >= myNumber && Int32.Parse(theirNumber) <= 21)
+                        {
+                            System.Console.WriteLine("You win.");
+                        }
+                        else
+                        {
+                            System.Console.WriteLine("You lose.");
+                        }
+
             } while (true);
         }
     }
